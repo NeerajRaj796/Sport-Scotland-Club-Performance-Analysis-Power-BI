@@ -9,6 +9,14 @@ This case study follows the structured data lifecycle:
 
 Ask → Prepare → Process → Analyze → Share → Act
 
+Dashboard Structure:
+
+![Club Members – Year-on-Year Performance](Club-Members-Page.png)
+
+![Participants – Year-on-Year Performance](Participants-Page.png)
+
+![Coaches, Capacity & Location – Year-on-Year Analysis](Coaches-Page.png)
+
 Scenario
 
 sportscotland works in partnership with Scottish Governing Bodies to increase participation in sport across Scotland. To support this objective, annual data is collected on club membership, participants, and coaches across multiple local authorities.
