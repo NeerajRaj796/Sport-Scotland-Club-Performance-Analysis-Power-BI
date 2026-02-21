@@ -1,118 +1,217 @@
-🏅 Sport Scotland Membership, Participation & Coaching Analysis
-Power BI | Advanced DAX | Public Sector Performance Analytics
-📌 Project Overview
+📊 CASE STUDY: Sport Scotland Membership, Participation & Coaching Dashboard
 
-This project was undertaken as a structured analytical challenge to evaluate how sport participation is evolving across Scotland using publicly available data from sportscotland. The dataset covers a three-year period (2023–2025) and includes over 200 clubs, 81K registered members, 51K annual participants, and 889 active coaches.
+Author: Neeraj Raj Srinivasa Raju
+Tool: Microsoft Power BI, DAX, Power Query, Excel
+Data Source: sportscotland Public Club Dataset (2023–2025)
 
-The objective was to determine whether growth in membership and participation is being supported by sufficient coaching capacity, and whether engagement is balanced across demographics and geography.
+The case study follows the six-step data analysis lifecycle:
 
-Rather than presenting isolated metrics, this project integrates membership, participation, and coaching data into a single scalable Power BI model to provide a complete performance view.
+❓ Ask
+💻 Prepare
+🛠 Process
+📊 Analyze
+📋 Share
+🎯 Act
 
-🎯 Business Question
+Scenario
 
-Is sport engagement growing sustainably, and is coaching capacity aligned with that growth across Scotland?
+sportscotland collects annual data from Scottish Governing Bodies to monitor:
 
-To answer this, the analysis focused on:
+Club membership
 
-Total Members & Members YoY %
+Participation levels
 
-Total Participants & Participants trends
+Coaching workforce
 
-Total Coaches & Coaches YoY %
+Regional distribution
 
-Female % and Youth % representation
+The dataset covers over:
 
-Qualified Coaches %
+200+ clubs
 
-Coaches-to-Members ratio
+81K members
 
-Geographic distribution by local authority
+51K participants
 
-🛠 Data Preparation & Modelling
+889 coaches
 
-The dataset was restructured using Power Query to remove duplicate headers, standardise formats, and validate totals across adult/youth and male/female splits.
+The objective of this analysis was to transform raw structured datasets into an integrated Business Intelligence dashboard that identifies:
 
-A star schema model was implemented:
+Year-on-Year membership growth
 
-Fact Tables
+Participation stability and conversion potential
 
-Members
+Coaching capacity alignment
 
-Participants
+Gender representation
 
-Coaches
+Regional disparities
 
-Dimensions
+The goal was to support sustainable sport development planning across Scotland.
 
-Club
+1️⃣ Ask
 
-Local Authority
+💡 Business Task:
 
-Year
+Analyze sportscotland membership, participation, and coaching data to determine whether engagement growth is sustainable and workforce capacity is aligned.
 
-DAX measures were built using:
+Primary stakeholders:
+Sport development planners and workforce strategy teams
 
-CALCULATE and FILTER for dynamic YoY logic
+Secondary stakeholders:
+Regional officers and inclusion programme leads
 
-DIVIDE for safe percentage and ratio calculations
+Key Questions:
 
-Cross-table aggregation for capacity comparisons
+Is membership growing year-on-year?
 
-This ensured the dashboard supports accurate time-based performance tracking.
+Is participation stable or volatile?
 
-📊 Findings by Analytical Area
+Is coaching capacity keeping pace with membership growth?
 
-📈 Membership – Scale & Growth
+Are there gender gaps in membership vs coaching?
+
+Which local authorities outperform or underperform?
+
+2️⃣ Prepare
+
+📂 Data Source: sportscotland public reporting dataset
+
+Time period used:
+2023, 2024, 2025
+
+Key Metrics Defined:
+
+Total Members: 81K
+
+YoY Membership Growth: 13.93%
+
+Adult Members: 51K
+
+Youth Members: 30K
+
+Female Members: 38K (~47%)
+
+Total Participants: 51K
+
+Female Participants: 23K (~45%)
+
+Total Coaches: 889
+
+Qualified Coaches: 469 (53%)
+
+Female Coaches: 28%
+
+Coaches YoY Growth: 1.91%
+
+Coaches-to-Members Ratio: ~1:91
+
+Data Reliability Considerations:
+
+Structured aggregated reporting
+
+No personal identifiers
+
+Multi-year consistency
+
+Separate tables for Members, Participants, Coaches
+
+Limitations:
+
+Three-year comparison only
+
+Aggregated club-level data
+
+No individual tracking
+
+3️⃣ Process
+Data Cleaning Steps:
+
+Removed duplicate headers
+
+Standardised club names
+
+Verified totals across adult/youth splits
+
+Validated gender totals
+
+Checked club-year uniqueness
+
+Reconciled totals using Excel cross-validation
+
+Data Model Implemented:
+
+Star Schema:
+
+Fact Tables:
+
+Fact_Members
+
+Fact_Participants
+
+Fact_Coaches
+
+Dimension Tables:
+
+Dim_Club
+
+Dim_LocalAuthority
+
+Dim_Year
+
+Relationships configured as one-to-many for clean filtering.
+
+Key DAX Used:
+
+CALCULATE()
+
+FILTER()
+
+DIVIDE()
+
+SUMX()
+
+ALL()
+
+VAR / RETURN
+
+This enabled dynamic YoY KPIs, demographic percentages, and capacity ratios.
+
+4️⃣ Analyze
+📌 Club Members – Year-on-Year Performance
 
 ![Club Members – Year-on-Year Performance](Club-Members-Page.png)
 
-Total Membership stands at 81K, split into:
+Membership stands at 81K, with 13.93% YoY growth.
 
-51K Adult Members
+Breakdown:
 
-30K Youth Members
+Adult: 51K
 
-38K Female Members
+Youth: 30K (37%)
 
-45K Male Members
+Female: 38K (~47%)
 
-YoY Growth: 13.93%
+Insight:
 
-Youth members represent approximately 37% of total membership (30K of 81K), indicating a strong development pipeline. Female members account for roughly 47%, showing near-balanced representation at membership level.
+Youth representation is strong, indicating long-term sustainability.
+Female membership is near balanced.
 
-However, growth is not evenly distributed across clubs. For example:
+However, growth is concentrated:
 
-Club C19 shows 4.9K growth, significantly higher than several clubs below 3K.
+C19 shows 4.9K growth
 
-Interpretation
+Several clubs remain below 3K
 
-Membership growth is strong at nearly 14%, but performance concentration suggests reliance on specific high-performing clubs.
+This indicates uneven growth distribution.
 
-Strategic Action
-
-Replicate best practices from top-performing clubs (e.g., C19).
-
-Monitor clubs with flat or declining YoY % for operational support.
-
-Maintain gender balance near current 47–50% levels.
-
-🏃 Participation – Engagement Pipeline
+📌 Participants – Engagement & Pipeline
 
 ![Participants – Year-on-Year Performance](Participants-Page.png)
 
 Total Participants: 51K
 
-28K Adult Participants
-
-23K Youth Participants
-
-23K Female Participants
-
-Youth Participation: 46%
-
-Female Participation: 45%
-
-Participation trend:
+Trend:
 
 22.8K (2023)
 
@@ -120,103 +219,96 @@ Participation trend:
 
 17.5K (2025)
 
-This reflects a significant drop between 2023 and 2024, followed by recovery in 2025.
+This reflects volatility between 2023 and 2024 with partial recovery.
 
-Geographically:
+Demographics:
 
-City of Edinburgh shows ~13K participation
+Youth Participation: 46%
 
-Glasgow City shows ~9K
+Female Participation: 45%
 
-Several authorities show near-zero engagement
+Regional insight:
 
-Interpretation
+Edinburgh ~13K
 
-Participation remains strong overall but demonstrates volatility year-on-year. Since participants represent future members, instability here may affect long-term growth.
+Glasgow ~9K
 
-Strategic Action
+Several areas near zero
 
-Investigate drivers of the 12K drop from 2023 to 2024.
+Participation remains high overall but is unstable year-on-year.
 
-Improve participant-to-member conversion in high-volume authorities.
-
-Target low-engagement regions with outreach programmes.
-
-🧑‍🏫 Coaching – Workforce Capacity & Alignment
+📌 Coaches – Capacity & Alignment
 
 ![Coaches, Capacity & Location – Year-on-Year Analysis](Coaches-Page.png)
 
 
 Total Coaches: 889
-Qualified Coaches: 469
-Qualified Coaches %: 53%
-Female Coaches %: 28%
 Coaches YoY Growth: 1.91%
+Qualified Coaches: 53%
+Female Coaches: 28%
 
-Coaches-to-Members ratio: 0.01
-This equates to approximately 1 coach per 91 members (81K / 889).
+Capacity Ratio:
 
-Regional coaching distribution:
+81K Members / 889 Coaches ≈ 1 coach per 91 members
 
-City of Edinburgh: 197 coaches
+Key Observations:
 
-Glasgow City: 183 coaches
+Membership growth (13.93%) significantly exceeds coaching growth (1.91%).
 
-Some regions: fewer than 20 coaches
+Female membership (~47%) vs Female coaches (28%) shows a 19% representation gap.
 
-Interpretation
+Edinburgh (197 coaches) and Glasgow (183 coaches) dominate workforce distribution.
 
-Membership is growing at 13.93%, while coaching capacity is growing at only 1.91%. This indicates workforce growth is not keeping pace with demand.
+Several authorities have fewer than 20 coaches.
 
-Female representation in membership is ~47%, while female coaching stands at 28%, creating a significant gender gap.
+This indicates workforce imbalance and potential service pressure.
 
-Strategic Action
+5️⃣ Share
 
-Increase coaching recruitment growth toward 10–12% annually.
+The dashboard was structured into three core analytical pages:
 
-Launch female coach development initiatives to close the 19% gender gap.
+Club Members – Growth & Demographics
 
-Improve qualification rate from 53% toward 60%+.
+Participants – Engagement & Regional Comparison
 
-Rebalance workforce allocation in underrepresented local authorities.
+Coaches – Capacity & Workforce Distribution
 
-📊 Dashboard Pages
-📈 Club Members – Year-on-Year Performance
+Interactive slicers (Year, Local Authority) allow dynamic filtering.
 
-This page analyses membership growth, demographic representation, and club-level variation to assess sustainability and performance concentration.
+The design prioritises clarity, KPI visibility, and benchmarking rather than decorative visuals.
 
-🏃 Participants – Year-on-Year Performance
+Each page progresses from:
 
-This page evaluates participation trends and demographic composition to measure engagement stability and future membership pipeline strength.
+High-level KPIs → Trend → Regional breakdown → Club-level comparison
 
-🧑‍🏫 Coaches, Capacity & Location – Year-on-Year Analysis
+6️⃣ Act
+Conclusions Based on Analysis:
 
-This page assesses workforce scale, qualification levels, gender representation, and geographic distribution to evaluate alignment between supply and demand.
+📈 Membership is growing strongly (13.93%).
+🏃 Participation remains substantial (51K) but volatile.
+🧑‍🏫 Coaching growth (1.91%) is not keeping pace with membership growth.
+👩 Female membership (~47%) significantly exceeds female coaching (28%).
+🗺 Workforce and participation distribution are uneven geographically.
 
-📌 Final Conclusion
+Strategic Recommendations:
 
-The analysis shows:
+🔹 Increase coaching recruitment growth toward 10–12% annually to match membership growth.
+🔹 Develop female coaching development pathways to close the 19% gender gap.
+🔹 Improve coach qualification rate from 53% toward 60%+.
+🔹 Target low-engagement local authorities with outreach funding.
+🔹 Investigate participation drop between 2023–2024 to improve retention.
+🔹 Replicate success factors from high-growth clubs (e.g., C19).
 
-Membership is growing strongly (13.93%).
+📌 What This Demonstrates
 
-Participation remains substantial (51K) but volatile.
+✔ Structured BI lifecycle
+✔ Clean star-schema modelling
+✔ Advanced DAX implementation
+✔ Capacity-based analysis (not just totals)
+✔ Quantified, action-driven insights
+✔ Public sector strategic alignment
 
-Coaching capacity growth (1.91%) is significantly lower than membership growth.
+📬 Contact
 
-Female representation is balanced at membership level (~47%) but underrepresented in coaching (28%).
-
-Workforce distribution varies significantly by region.
-
-This indicates that while engagement levels are healthy, sustainable growth requires:
-
-Workforce expansion
-
-Improved coach qualification rates
-
-Increased female coach recruitment
-
-Geographic balancing of resources
-
-Stabilisation of participation retention
-
-By integrating scale, growth, demographics, and workforce capacity into one analytical model, this dashboard enables evidence-based strategic planning rather than reactive reporting.
+Neeraj Raj Srinivasa Raju
+📧 neerajrajsrinivasaraju@gmail.com
