@@ -1,141 +1,222 @@
-🏅 Sport Scotland, Membership & Coaching Analysis (Power BI)
-
+🏅 Sport Scotland Membership, Participation & Coaching Analysis
+Power BI | Advanced DAX | Public Sector Performance Analytics
 📌 Project Overview
 
-This project was undertaken as a self-initiated Power BI challenge to deepen my skills in data modelling, DAX calculations, and analytical storytelling using real-world public sector data.
+This project was undertaken as a structured analytical challenge to evaluate how sport participation is evolving across Scotland using publicly available data from sportscotland. The dataset covers a three-year period (2023–2025) and includes over 200 clubs, 81K registered members, 51K annual participants, and 889 active coaches.
 
-Using publicly available data from the sportscotland website, I analysed how sport participation is changing over time across Scotland, focusing on club members, participants, and coaching capacity. The report highlights year-on-year (YoY) trends, demographic composition, and geographic variation to support evidence-based decision-making.
+The objective was to determine whether growth in membership and participation is being supported by sufficient coaching capacity, and whether engagement is balanced across demographics and geography.
 
-🎯 Context & Data Source
+Rather than presenting isolated metrics, this project integrates membership, participation, and coaching data into a single scalable Power BI model to provide a complete performance view.
 
-sportscotland works with Scottish Governing Bodies (SGBs) to increase participation in sport across Scotland.
-As part of this, data is published annually covering:
+🎯 Business Question
 
-Club membership
+Is sport engagement growing sustainably, and is coaching capacity aligned with that growth across Scotland?
 
-Participants (non-members)
+To answer this, the analysis focused on:
+
+Total Members & Members YoY %
+
+Total Participants & Participants trends
+
+Total Coaches & Coaches YoY %
+
+Female % and Youth % representation
+
+Qualified Coaches %
+
+Coaches-to-Members ratio
+
+Geographic distribution by local authority
+
+🛠 Data Preparation & Modelling
+
+The dataset was restructured using Power Query to remove duplicate headers, standardise formats, and validate totals across adult/youth and male/female splits.
+
+A star schema model was implemented:
+
+Fact Tables
+
+Members
+
+Participants
 
 Coaches
 
-Local authority distribution
+Dimensions
 
-This project analyses three years of data (2023–2025) for one governing body.
+Club
 
-📊 Dashboard Structure
+Local Authority
 
-The Power BI report is organised into three analytical pages, supported by a custom navigation menu built using bookmarks and buttons for a professional, app-like experience.
+Year
 
-📈 Page 1: Club Members – Year-on-Year Performance
+DAX measures were built using:
+
+CALCULATE and FILTER for dynamic YoY logic
+
+DIVIDE for safe percentage and ratio calculations
+
+Cross-table aggregation for capacity comparisons
+
+This ensured the dashboard supports accurate time-based performance tracking.
+
+📊 Findings by Analytical Area
+
+📈 Membership – Scale & Growth
 
 ![Club Members – Year-on-Year Performance](Club-Members-Page.png)
 
-This page focuses on how formal club membership has evolved over time, with a strong emphasis on YoY growth, gender balance, youth engagement, and club-level performance.
+Total Membership stands at 81K, split into:
 
-Key insights include:
+51K Adult Members
 
-Overall membership growth across the three-year period
+30K Youth Members
 
-Differences in growth rates between clubs
+38K Female Members
 
-Changes in youth and female representation year-on-year
+45K Male Members
 
-Key visuals:
+YoY Growth: 13.93%
 
-KPI cards (Total Members, YoY Growth %, Youth %, Female %)
+Youth members represent approximately 37% of total membership (30K of 81K), indicating a strong development pipeline. Female members account for roughly 47%, showing near-balanced representation at membership level.
 
-Line chart showing membership trends over time
+However, growth is not evenly distributed across clubs. For example:
 
-Stacked bar chart showing adult vs youth and male vs female composition
+Club C19 shows 4.9K growth, significantly higher than several clubs below 3K.
 
-Club ranking bar chart
+Interpretation
 
-Detailed club summary matrix with YoY metrics
+Membership growth is strong at nearly 14%, but performance concentration suggests reliance on specific high-performing clubs.
 
-🏃 Page 2: Participants – Year-on-Year Performance
+Strategic Action
+
+Replicate best practices from top-performing clubs (e.g., C19).
+
+Monitor clubs with flat or declining YoY % for operational support.
+
+Maintain gender balance near current 47–50% levels.
+
+🏃 Participation – Engagement Pipeline
 
 ![Participants – Year-on-Year Performance](Participants-Page.png)
 
-This page analyses participants who are not formal club members, providing insight into broader engagement and future membership potential.
+Total Participants: 51K
 
-Key insights include:
+28K Adult Participants
 
-YoY growth in total participants
+23K Youth Participants
 
-Adult vs youth participation split
+23K Female Participants
 
-Female participation share
+Youth Participation: 46%
 
-Variation in participation across clubs and local authorities
+Female Participation: 45%
 
-Key visuals:
+Participation trend:
 
-KPI cards (Total Participants, Youth %, Female %)
+22.8K (2023)
 
-Participation trend over time
+10.8K (2024)
 
-Participation composition by year
+17.5K (2025)
 
-Club-level participation performance
+This reflects a significant drop between 2023 and 2024, followed by recovery in 2025.
 
-Participation by local authority
+Geographically:
 
-Core DAX used on this page:
+City of Edinburgh shows ~13K participation
 
-Aggregated participant measures
+Glasgow City shows ~9K
 
-YoY change logic
+Several authorities show near-zero engagement
 
-Demographic percentage calculations
+Interpretation
 
-Core DAX used on this page:
+Participation remains strong overall but demonstrates volatility year-on-year. Since participants represent future members, instability here may affect long-term growth.
 
-Year-on-Year calculations
+Strategic Action
 
-Percentage share measures
+Investigate drivers of the 12K drop from 2023 to 2024.
 
-Previous year comparisons
+Improve participant-to-member conversion in high-volume authorities.
 
-🧑‍🏫 Page 3: Coaches, Capacity & Location – Year-on-Year Analysis
+Target low-engagement regions with outreach programmes.
+
+🧑‍🏫 Coaching – Workforce Capacity & Alignment
 
 ![Coaches, Capacity & Location – Year-on-Year Analysis](Coaches-Page.png)
 
 
-This page focuses on coaching capacity, assessing whether the supply of coaches is keeping pace with participation and membership growth.
+Total Coaches: 889
+Qualified Coaches: 469
+Qualified Coaches %: 53%
+Female Coaches %: 28%
+Coaches YoY Growth: 1.91%
 
-Key insights include:
+Coaches-to-Members ratio: 0.01
+This equates to approximately 1 coach per 91 members (81K / 889).
 
-Total coaches and YoY change
+Regional coaching distribution:
 
-Qualified vs unqualified coach split
+City of Edinburgh: 197 coaches
 
-Female coach representation
+Glasgow City: 183 coaches
 
-Geographic distribution of coaches
+Some regions: fewer than 20 coaches
 
-Coaches-to-members ratio
+Interpretation
 
-Key visuals:
+Membership is growing at 13.93%, while coaching capacity is growing at only 1.91%. This indicates workforce growth is not keeping pace with demand.
 
-KPI cards (Total Coaches, Qualified %, Female %)
+Female representation in membership is ~47%, while female coaching stands at 28%, creating a significant gender gap.
 
-Coaches by local authority
+Strategic Action
 
-Qualification split over time
+Increase coaching recruitment growth toward 10–12% annually.
 
-Gender balance by region
+Launch female coach development initiatives to close the 19% gender gap.
 
-Coaches per club ranking
+Improve qualification rate from 53% toward 60%+.
 
-Core DAX used on this page:
+Rebalance workforce allocation in underrepresented local authorities.
 
-Qualification split logic
+📊 Dashboard Pages
+📈 Club Members – Year-on-Year Performance
 
-Ratio-based measures
+This page analyses membership growth, demographic representation, and club-level variation to assess sustainability and performance concentration.
 
-YoY coach growth calculations
+🏃 Participants – Year-on-Year Performance
 
-👤 Author
+This page evaluates participation trends and demographic composition to measure engagement stability and future membership pipeline strength.
 
-Neeraj Raj Srinivasa Raju
-Business Intelligence | Data Analytics | Power BI
-📍 UK
+🧑‍🏫 Coaches, Capacity & Location – Year-on-Year Analysis
+
+This page assesses workforce scale, qualification levels, gender representation, and geographic distribution to evaluate alignment between supply and demand.
+
+📌 Final Conclusion
+
+The analysis shows:
+
+Membership is growing strongly (13.93%).
+
+Participation remains substantial (51K) but volatile.
+
+Coaching capacity growth (1.91%) is significantly lower than membership growth.
+
+Female representation is balanced at membership level (~47%) but underrepresented in coaching (28%).
+
+Workforce distribution varies significantly by region.
+
+This indicates that while engagement levels are healthy, sustainable growth requires:
+
+Workforce expansion
+
+Improved coach qualification rates
+
+Increased female coach recruitment
+
+Geographic balancing of resources
+
+Stabilisation of participation retention
+
+By integrating scale, growth, demographics, and workforce capacity into one analytical model, this dashboard enables evidence-based strategic planning rather than reactive reporting.
