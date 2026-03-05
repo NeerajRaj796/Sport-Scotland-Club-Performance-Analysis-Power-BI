@@ -1,5 +1,6 @@
-📊 CASE STUDY
-Sport Scotland Membership, Participation & Coaching Sustainability Analysis
+📊 **CASE STUDY**
+**Sport Scotland Membership, Participation & Coaching Sustainability Analysis**
+
 
 Author: Neeraj Raj Srinivasa Raju
 Tool: Microsoft Power BI | DAX | Power Query
@@ -9,7 +10,7 @@ This case study follows the structured data lifecycle:
 
 Ask → Prepare → Process → Analyze → Share → Act
 
-Dashboard Structure:
+**Dashboard Structure:**
 
 ![Club Members – Year-on-Year Performance](Club-Members-Page.png)
 
@@ -17,9 +18,10 @@ Dashboard Structure:
 
 ![Coaches, Capacity & Location – Year-on-Year Analysis](Coaches-Page.png)
 
-Scenario
+**Scenario**
 
-sportscotland works in partnership with Scottish Governing Bodies to increase participation in sport across Scotland. To support this objective, annual data is collected on club membership, participants, and coaches across multiple local authorities.
+
+Sportscotland works in partnership with Scottish Governing Bodies to increase participation in sport across Scotland. To support this objective, annual data is collected on club membership, participants, and coaches across multiple local authorities.
 
 The dataset analysed in this project covers three reporting years (2023–2025) and includes 81,000 registered members, 51,000 participants, and 889 active coaches across more than 200 clubs.
 
@@ -29,7 +31,7 @@ The central strategic question guiding the analysis was:
 
 Is sport participation growing sustainably, and is coaching capacity aligned to support that growth across Scotland?
 
-1️⃣ Ask
+1️⃣**Ask**
 
 To answer this overarching question, the analysis was structured around five operational objectives.
 
@@ -45,7 +47,7 @@ Finally, I assessed geographic distribution to identify regional disparities in 
 
 Each of these areas directly influences funding decisions, workforce planning, and long-term development strategy.
 
-2️⃣ Prepare
+2️⃣**Prepare**
 
 Before building the dashboard, I defined clear baseline performance indicators to anchor the analysis.
 
@@ -59,7 +61,7 @@ When calculated as a capacity ratio, there is approximately one coach per 91 mem
 
 Defining these metrics early ensured that every calculation later in the process was aligned to answering sustainability and workforce alignment questions.
 
-3️⃣ Process
+3️⃣**Process**
 
 The dataset required structural cleaning and validation before meaningful analysis could begin.
 
@@ -71,7 +73,9 @@ Advanced DAX measures were developed using CALCULATE and FILTER to compute dynam
 
 This modelling approach ensured that insights remained accurate even when filtered by region or year.
 
-4️⃣ Analyze
+4️⃣**Analyze**
+
+
 Membership – Growth and Structural Stability
 
 Membership currently stands at 81,000 and is growing at 13.93% year-on-year. This indicates strong engagement growth across Scotland.
@@ -120,7 +124,7 @@ Regionally, workforce distribution is uneven. Edinburgh has 197 coaches and Glas
 
 From a sustainability perspective, coaching capacity misalignment represents the most critical structural risk.
 
-5️⃣ Share
+5️⃣ **Share**
 
 The dashboard was intentionally structured across three focused pages.
 
@@ -134,7 +138,7 @@ This progression mirrors strategic decision-making logic: demand, pipeline, and 
 
 Interactive slicers allow filtering by year and region to support scenario analysis and policy evaluation.
 
-6️⃣ Act
+6️⃣**Act**
 
 Based on the findings, several strategic actions are recommended.
 
