@@ -76,7 +76,7 @@ This modelling approach ensured that insights remained accurate even when filter
 4️⃣**Analyze**
 
 
-Membership – Growth and Structural Stability
+**Membership – Growth and Structural Stability**
 
 Membership currently stands at 81,000 and is growing at 13.93% year-on-year. This indicates strong engagement growth across Scotland.
 
@@ -152,7 +152,7 @@ Fourth, targeted funding should be directed toward underrepresented local author
 
 Finally, the 2023–2024 participation drop should be investigated to identify retention barriers and prevent future volatility.
 
-Final Strategic Position
+**Final Strategic Position**
 
 The data demonstrates that sport engagement across Scotland is expanding in scale and remains relatively inclusive at membership and participation levels.
 
