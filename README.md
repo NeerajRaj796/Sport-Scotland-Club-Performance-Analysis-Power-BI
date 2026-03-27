@@ -1,5 +1,5 @@
 📊 **CASE STUDY**
-**Sport Scotland Membership, Participation & Coaching Sustainability Analysis**
+**Scotland Membership/Club Performance Dashboard**
 
 
 Author: Neeraj Raj Srinivasa Raju
